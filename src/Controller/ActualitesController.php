@@ -20,8 +20,6 @@ class ActualitesController extends AbstractController
     #[Route('/actualites', name: 'actualites')]
     public function index(): Response
     {
-
-        // $actualites =  $this->entityManager->getRepository(Actualites::class)->findAll();
         $actualites =  $this->entityManager
             ->getRepository(Actualites::class)
             ->findBy(array(),array('date' => 'DESC'));

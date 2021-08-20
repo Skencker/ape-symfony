@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\LiensRepository;
+use App\Repository\ConseilEcoleRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=LiensRepository::class)
+ * @ORM\Entity(repositoryClass=ConseilEcoleRepository::class)
  */
-class Liens
+class ConseilEcole
 {
     /**
      * @ORM\Id
@@ -25,7 +25,12 @@ class Liens
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lien;
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $fichier;
 
     public function getId(): ?int
     {
@@ -44,14 +49,26 @@ class Liens
         return $this;
     }
 
-    public function getLien(): ?string
+    public function getDate(): ?string
     {
-        return $this->lien;
+        return $this->date;
     }
 
-    public function setLien(string $lien): self
+    public function setDate(string $date): self
     {
-        $this->lien = $lien;
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getFichier(): ?string
+    {
+        return $this->fichier;
+    }
+
+    public function setFichier(string $fichier): self
+    {
+        $this->fichier = $fichier;
 
         return $this;
     }

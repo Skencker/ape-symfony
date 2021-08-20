@@ -21,11 +21,11 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $imageDiapo = $this->entityManager->getRepository(Imagediapo::class)->findAll();
-        $organigramme = $this->entityManager->getRepository(Organigramme::class)->findAll();
+        $organigrammes = $this->entityManager->getRepository(Organigramme::class)->findAll();
 
         return $this->render('home/index.html.twig', [
             'imagediapos' => $imageDiapo, 
-            'organigramme' => $organigramme
+            'organigrammes' => $organigrammes
         ]);
     }
 }

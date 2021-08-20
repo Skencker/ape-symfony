@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Actualites;
 use App\Entity\Classes;
+use App\Entity\ConseilEcole;
 use App\Entity\Imagediapo;
 use App\Entity\Liens;
 use App\Entity\Organigramme;
@@ -15,6 +16,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator ;
 
 use Twig\Extra\Intl\IntlExtension;
 
@@ -27,7 +29,9 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        $routeBuilder = $this->get(AdminUrlGenerator::class);
+
+        return $this->redirect($routeBuilder->setController(ImagediapoCrudController::class)->generateUrl());
     }
 
     public function configureDashboard(): Dashboard
@@ -48,5 +52,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Classes', 'fas fa-chalkboard-teacher', Classes::class);
         yield MenuItem::linkToCrud('Fonctions Parents Délégués', 'fas fa-users-cog', FonctionParentsDelegues::class);
         yield MenuItem::linkToCrud('Parents Délégués', 'fas fa-user-plus', ParentsDelegues::class);
+        yield MenuItem::linkToCrud('Conseils Ecole', 'fas fa-file-alt', ConseilEcole::class);
     }
 }
