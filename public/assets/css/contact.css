@@ -1,0 +1,32 @@
+
+.content p {
+    line-height: 35px;
+    font-weight: 600;
+  
+  }
+  
+  .maps {
+    background: #fbf7ec;
+  }
+  
+  .maps h2,
+  .maps h3 {
+    color: var(--bleu);
+    font-weight: 900;
+  }
+  
+  .maps p {
+    line-height: 25px;
+  }
+  
+  .text-contact {
+    animation: scale-in-center 1s ;
+  }
+  
+  .img-contact {
+    animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  .img-contact img {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }

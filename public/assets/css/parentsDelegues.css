@@ -1,0 +1,48 @@
+.parents  {
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .parents {
+      height: 1000px;
+    }
+  }
+  @media screen and (max-width:1000px) {
+  
+    .baniere {
+      height: 1000px;
+    }
+    .association {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .parents {
+      height: 1000px;
+    }
+  
+  }
+  @media screen and (max-width: 580px) {
+    .parents {
+      height: 2000px;
+    }
+    .baniere {
+      height: 1000px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .parents {
+      height: 1600px;
+    }
+  }
+  
+  .parents h2 {
+    width: 70%;
+    margin: auto;
+    background-color: var(--bleu);
+    color: var(--jaune);
+  }
+  
+  .classe {
+    animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }

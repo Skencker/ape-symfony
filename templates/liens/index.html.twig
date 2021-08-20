@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<style>
+    .contact {
+        background-image: url("{{ asset('assets/images/ecole.jpg')}}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+    }
+
+    .baniere-doc {
+        background-image: url("{{ asset('assets/images/books.jpg')}}");
+        padding: 50px;
+    }
+</style>
+
+    <main>
+        <section class="baniere-doc d-flex justify-content-center">
+            <h1 class="align-self-center">Liens Utiles</h1>
+        </section>
+        <section class="lienUtile d-flex flex-column align-items-center mt-5" style="height: 400px" >
+            <div class="p-2">
+            <?php
+                $statement = $db->query('SELECT * FROM lienUtile', PDO::FETCH_ASSOC);                  
+                foreach ($statement as $row):  ?>              
+                    <a href="<?php echo $row['href']?>"> <?php echo $row['nom'] ?> </a> </br> </br>
+                    <?php
+                endforeach;
+                ?>
+      
+        </section>
+       
+        <section class="contact d-flex justify-content-sm-evenly align-items-center text-white">
+                
+            <h3>Contactez nous</h3>
+            <a href="mailto:sandrinekencker@hotmail.com" >Contact</a>
+        </section>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités{% endblock %}
+
+{% block content %}
+
+<style>
+    .contact {
+        background-image: url("{{ asset('assets/images/ecole.jpg')}}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        width: 100%;
+    }
+    .baniere-actualites {
+        background-image: url("{{ asset('assets/images/ballons.jpg')}}");
+    }
+</style>
+<main>
+        <section class="baniere-actualites d-flex justify-content-center">
+            <h1 class="align-self-center ">Actualités</h1>
+        </section>
+        <section class="events">
+            <div class="container">
+                <div class="row event">
+                        {% for actualite in actualites %}
+                            <div class="col-lg-6 col-md-12 p-5">
+                                <img class="img img-fluid" src="/uploads/images/{{ actualite.image }}"alt="{{ actualite.name }}">
+                            </div>
+                            <div class="col p-5">
+                                <h2 >{{ actualite.name }}</h2>
+                                <hr>
+                                {# <h4> {{ 'actualite.date' | date("m/d/Y")}} </h4> #}
+                                <p>{{ actualite.description }}</p>
+                                
+                                <a href=""> Document </a>
+                            </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="contact d-flex justify-content-sm-evenly align-items-center text-white">
+                
+            <h3>Contactez nous</h3>
+            <a href="mailto:sandrinekencker@hotmail.com" >Contact</a>
+        </section>
+    </main>
+
+{% endblock %}

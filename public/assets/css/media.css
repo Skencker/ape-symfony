@@ -1,0 +1,19 @@
+ @media screen and (max-width: 700px) {
+    .carroussel img {
+      height: 300px
+    }
+
+    .lien-info {
+        height: 1500px
+      }
+    
+    .lien-info i {
+    font-size: 100px;
+    }
+
+    hr {
+    width: 50px;
+    opacity: 1;
+    }
+
+};
