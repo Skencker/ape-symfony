@@ -30,24 +30,21 @@
                                             <h2 class='text-center'>{{parent.classe}}</h2> 
                                             {% for parent in parents %}
                                                 {% if parent.classe == classTab %}
-                                                        
                                                                 <div class="col-6">
-                                                                <div class="row"> 
-                                                                    <img class='img-fluid' height="560px" width="420px" src="/uploads/images/{{ parent.image }}"/>
+                                                                    <div class="row"> 
+                                                                        <img class='img-fluid' height="560px" width="420px" src="/uploads/images/{{ parent.image }}"/>
+                                                                    </div>
+                                                                    <div class="row d-flex justify-content-center fw-bolder"> {{parent.fonction}}</div>
+                                                                    <div class="row d-flex justify-content-center text-center"> {{parent.firstname}}</br> {{parent.name}}</div>
                                                                 </div>
-                                                                <div class="row d-flex justify-content-center fw-bolder"> {{parent.fonction}}</div>
-                                                                <div class="row d-flex justify-content-center text-center"> {{parent.firstname}}</br> {{parent.name}}</div>
-                                                                </div>
-
                                                 {% else %}
                                                 <div> </div>
                                                 {% endif %}
                                             {% endfor %}
-                        {% endif %}
-                                        {# </div> #}
-                                    </div>
+                                        </div>
+                        {% endif %}                 
                     {% endfor %}    
-            </div>
+                                    </div>
                 {% endfor %}    
             </div>
         </section>

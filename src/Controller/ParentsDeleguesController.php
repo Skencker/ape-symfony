@@ -22,12 +22,16 @@ class ParentsDeleguesController extends AbstractController
     {
         $parents =  $this->entityManager->getRepository(ParentsDelegues::class)->findAll();
         $classTab = ['PS', 'PS / MS', 'MS', 'MS / GS', 'GS', 'GS / CP','CP', 'CP / CE1', 'CE1', 'CE1 / CE2' , 'CE2' , 'CE2 / CM1' ,  'CM1', 'CM1 / CM2' , 'CM2' ];
-        // $classeparents =  $this->entityManager->getRepository(ParentsDelegues::class)->findOneBy(['classe']);
+        // $classes = 'PS';
+        // $req =  $this->entityManager->getRepository(ParentsDelegues::class)->findBy(["classe" => $classes]);
+       
+
        
 // dd($classeparents);
         return $this->render('parents_delegues/index.html.twig', [
             'parents' => $parents,
-            // 'classeparents' => $classeParent,
+            // 'classeparentsdb' => $classes,
+            // 'req' => $req,
             'classTabs' => $classTab
         ]);
     }
