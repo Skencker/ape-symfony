@@ -21,7 +21,10 @@ class ActualitesController extends AbstractController
     public function index(): Response
     {
 
-        $actualites =  $this->entityManager->getRepository(Actualites::class)->findAll();
+        // $actualites =  $this->entityManager->getRepository(Actualites::class)->findAll();
+        $actualites =  $this->entityManager
+            ->getRepository(Actualites::class)
+            ->findBy(array(),array('date' => 'DESC'));
 
         return $this->render('actualites/index.html.twig', [
             'actualites' => $actualites
