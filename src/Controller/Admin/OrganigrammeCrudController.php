@@ -21,8 +21,8 @@ class OrganigrammeCrudController extends AbstractCrudController
             TextField::new('name'),
             TextField::new('date'),
             ImageField::new('fichier')
-                ->setUploadDir('public/uploads/images')
-                ->setBasePath('uploads/images')
+                ->setUploadDir('public/uploads/files')
+                ->setBasePath('uploads/files')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false)
         ];

@@ -84,14 +84,11 @@
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                            {# {{ dump(imagediapos)}} #}
-                                {% for organigramme in organigrammes %}
-                                    <a href="/uploads/files/{{ organigramme.fichier }}"> Organigramme</a> </br>
-                                    </br>
-                                {% endfor %}
-                                  
-                                {# <a href="./uploads/files/{{ organigramme.fichier }}"> Organigramme </a>';               #}
-                            </div>
+                                    {% for organigramme in organigrammes%}
+                                        <a href="uploads/files/{{organigramme.fichier}}"> Organigramme</a>
+                                    {% endfor %}
+                                </br>
+                             </div>
                         </div>
                     </div>
                 </div>

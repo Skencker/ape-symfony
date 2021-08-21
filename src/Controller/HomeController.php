@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Imagediapo;
 use App\Entity\Organigramme;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,7 +25,7 @@ class HomeController extends AbstractController
         $organigrammes = $this->entityManager->getRepository(Organigramme::class)->findAll();
 
         return $this->render('home/index.html.twig', [
-            'imagediapos' => $imageDiapo, 
+            'imagediapos' => $imageDiapo,
             'organigrammes' => $organigrammes
         ]);
     }
