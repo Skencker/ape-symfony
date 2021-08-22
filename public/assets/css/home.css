@@ -9,6 +9,8 @@
 }
 
 .titre {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5rem;
   font-size: 50px;
   font-weight: bold;
   animation: roll-in-left 1.5s ease-out both;
@@ -49,6 +51,8 @@ img {
 }
 
 .association h2 {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
   color: var(--bleu);
   font-size: 40px;

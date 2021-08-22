@@ -4,6 +4,10 @@
     font-weight: 600;
   
   }
+
+  .contact h3 {
+    font-family: 'Merriweather', serif;
+  }
   
   .maps {
     background: #fbf7ec;
