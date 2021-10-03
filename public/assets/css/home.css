@@ -3,7 +3,7 @@
 .baniere,
 .lien-info,
 .contact {
-    background-image: url("../../../assets/images/ecole.jpg");
+    background-image: url("{{ asset('assets/images/ecole.jpg')}}");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
