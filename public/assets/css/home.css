@@ -1,5 +1,16 @@
 /* Baniere */
 
+.baniere,
+.lien-info,
+.contact {
+    background-image: url("{{ asset('assets/images/ecole.jpg')}}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+}
+
 .baniere {
   height: 700px;
 }
