@@ -15,6 +15,131 @@
     background-position: center;
     width: 100%;
 }
+
+.baniere {
+  height: 700px;
+}
+
+.lien-info {
+  height: 30vh;
+}
+
+.titre {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5rem;
+  font-size: 50px;
+  font-weight: bold;
+  animation: roll-in-left 1.5s ease-out both;
+}
+
+.baniere a,
+.cards a,
+.contact a,
+.content a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: var(--bleu);
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.baniere a:hover,
+.cards a:hover,
+.contact a:hover,
+.content a:hover {
+  background-color: var(--jaune);
+  color: #1752a8;
+  transition: 0.5s;
+}
+
+img {
+  margin: auto;
+}
+
+/* association */
+
+.association {
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.association h2 {
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: var(--bleu);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.accordeon,
+.card {
+  background: #f7f5ed;
+  border: none;
+}
+
+.image-reunion img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.association .accordeon {
+  font-weight: 900;
+  font-size: 20px;
+  padding-right: 50px;
+}
+
+/* liens  */
+
+hr {
+  background-color: white;
+  width: 50px;
+  margin: auto;
+  padding-bottom: 3px;
+  opacity: 1;
+}
+
+.lien-info {
+  height: 30vh;
+}
+
+.lien-info h3 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+.lien-info a {
+  text-decoration: none;
+}
+
+.lien-info i {
+  font-size: 50px;
+}
+
+.lien {
+  color: white;
+  cursor: pointer;
+}
+
+.lien:hover {
+  color: var(--jaune);
+}
+
+/* cards */
+
+.cards a {
+  font-size: 15px;
+  color: white;
+}
+
+.card:hover {
+  border: 2px var(--jaune) solid ;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 </style>
 <main class="container-fluid p-0 m-0 " ps-0>
     <section class="baniere ">
@@ -27,7 +152,7 @@
                         Saint Pierre de Lages  
                     </div>
                     <div class="bouton mt-2 mb-5">
-                        <a href="actualites.php" class="text-center p-2 "> Actualités / évènements </a>
+                        <a href="actualites.php" class="text-center p-2 btn  btn-primary"> Actualités / évènements </a>
                     </div>
                 </h1>
             </div>
